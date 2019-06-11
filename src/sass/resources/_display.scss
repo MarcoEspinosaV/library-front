@@ -1,0 +1,252 @@
+.hide{
+  display: none;
+}
+.hide-on-small-and-down {
+  @media #{$small-and-down} {
+    display: none !important;
+  }
+}
+
+.hide-on-medium-down {
+  @media #{$medium-and-down} {
+    display: none !important;
+  }
+}
+.hide-on-large-and-down {
+  @media #{$large-and-down} {
+    display: none !important;
+  }
+}
+.hide-on-extra-large-and-down {
+  @media #{$extra-large-and-down} {
+    display: none !important;
+  }
+}
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+.block{
+  display: block;
+}
+.relative{
+  position: relative;
+}
+.display-none{
+  display: none;
+}
+.inline-block{
+  display: inline-block;
+}
+.flex-column{
+  @include flexbox();
+  @include flex-direction(column);
+}
+.flex-row{
+  @include flexbox();
+  @include flex-direction(row);
+  flex-wrap: wrap;
+}
+
+.flex-column-small-down{
+  @media #{$small-and-down} {
+    @include flex-direction(column);
+  }
+}
+.flex-row-small-down{
+  @media #{$small-and-down} {
+    @include flex-direction(row);
+  }
+}
+
+.flex-row-reverse-small-and-up{
+  @media #{$small-and-up} {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.flex-column-medium-down{
+  @media #{$medium-and-down} {
+    @include flex-direction(column);
+  }
+}
+.flex-row-medium-down{
+  @media #{$medium-and-down} {
+    @include flex-direction(row);
+  }
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-no-wrap{
+  flex-wrap: nowrap;
+}
+.flex-left{
+  @include align(flex-start);
+}
+.flex-right{
+  @include align(flex-end);
+}
+.flex-middle{
+  @include align(center);
+}
+.flex-end{
+  @include justify-content(flex-end);
+}
+.flex-start{
+  @include justify-content(flex-start);
+}
+.flex-center{
+  @include justify-content(center);
+}
+.flex-middle-small-down{
+  @media #{$small-and-down} {
+    @include align(center!important);
+  }
+}
+.flex-start-small-down{
+  @media #{$small-and-down} {
+    @include align(flex-start!important);
+  }
+}
+.flex-end-small-down {
+  @media #{$small-and-down} {
+    @include align(flex-end!important);
+  }
+}
+.flex-center-small-down{
+  @media #{$small-and-down} {
+    @include justify-content(center!important);
+  }
+}
+.flex-left-small-down{
+  @media #{$small-and-down} {
+    @include justify-content(flex-start!important);
+  }
+}
+.flex-left-small-right{
+  @media #{$small-and-down} {
+    @include justify-content(flex-end!important);
+  }
+}
+.flex-space-between{
+  display: flex;
+  justify-content: space-between;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.clearfix {
+  clear: both;
+}
+.divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: $divider-color;
+}
+.width-100{
+  width: 100%;
+}
+.width-auto{
+  width: auto;
+}
+.max-width-100{
+  max-width: 100%;
+}
+.height-100{
+  height: 100%;
+}
+.radius{
+  border-radius: $radio-primary!important;
+}
+.radius-big{
+  border-radius: $radio-big!important;
+}
+.no-radius{
+  border-radius: 0!important;
+}
+.list-flat, .list-inline{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-inline{
+  li{
+    float: left;
+  }
+}
+.content-transition{
+  @include transition(all .5s)
+}
+
+.wrap-on-small-and-down {
+  @media #{$small-and-down} {
+    flex-wrap: wrap;
+  }
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-05{
+  flex: .5;
+}
+
+.flex-025{
+  flex: .25;
+}
+
+.flex-075{
+  flex: .75;
+}
+
+.flex-04{
+  flex: .4;
+}
+
+.flex-06{
+  flex: .6;
+}
+
+.shadow-0{
+  box-shadow: $z-depth-0;
+}
+
+.shadow-1{
+  box-shadow: $z-depth-1;
+}
+
+.app-scroll{
+  -webkit-overflow-scrolling: touch;
+  @media #{$small-and-up} {
+    /* width */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-button{
+      width: 6px;
+      height: 0;
+      opacity: 0;
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background: rgba($color-secondary, .1);
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: $color-secondary;
+      border-radius: 3px;
+    }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: lighten($color-secondary, 40%);
+    }
+  }
+}

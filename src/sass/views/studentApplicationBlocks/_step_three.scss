@@ -1,0 +1,12 @@
+.student-application{
+  &.step-three{
+    .img-circle{
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}

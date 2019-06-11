@@ -1,0 +1,75 @@
+/*** global core styles ***/
+@import "./resources/normalize";
+@import "./resources/mixins";
+@import "./resources/prefixer";
+@import "./resources/colors";
+@import "./resources/genColors";
+@import "./resources/variables";
+@import "./resources/grid";
+@import "./resources/gridClassic";
+@import "./resources/display";
+@import "./resources/flexOrder";
+@import "./resources/buttons";
+@import "./resources/border";
+@import "./resources/fontPoppins";
+@import "./resources/fontMuli";
+@import "./resources/fonts";
+@import "./resources/marginPadding";
+@import "./resources/iconAndImages";
+@import "./resources/globalTransitions";
+
+/*** layout styles ***/
+@import "./layout/asideComponent";
+@import "./layout/headerComponent";
+@import "./layout/loginTheme";
+@import "./layout/parentTheme";
+@import "./layout/sideNavLayout";
+@import "./layout/adminTheme";
+@import "./layout/loaderComponent";
+@import "./layout/alertComponent";
+@import "./layout/modalComponent";
+@import "./layout/parentLayout";
+@import "./layout/parentSideNavLayout";
+
+/*** views styles ***/
+@import "./views/allocationQuotas";
+@import "./views/login";
+@import "./views/studentApplication";
+@import "./views/schoolSelector";
+@import "./views/structures";
+@import "views/costs";
+@import "views/optionsPaymentSelector";
+
+/*** components styles ***/
+@import "./components/asideFormLayoutComponent";
+@import "./components/inputComponent";
+@import "./components/flipComponent";
+@import "./components/filterComponent";
+@import "./components/modalLayoutComponent";
+@import "./components/selectorComponent";
+@import "./components/searchComponent";
+@import "./components/tableListComponent";
+@import "./components/selectComponent";
+@import "./components/wizardComponent";
+@import "./components/tooltipComponent";
+@import "./components/uploaderFileComponent";
+@import "./components/documentViewer";
+@import "./components/dateSelectorComponent";
+@import "./components/tabsNavComponent";
+@import "components/costTableComponent";
+@import "components/confirmDiscardChangesModal";
+@import "components/hourSelector";
+@import "components/daySelectorComponent";
+@import "components/multiLevelOptionsSelectComponent";
+@import "components/studentCardAllocationComponent";
+@import "components/progressComponent";
+@import "components/studentDetailAllocationQuotasModal";
+@import "components/genderSelectorComponent";
+@import "components/costsSelectorComponent";
+@import "components/trueFalseSelectorComponent";
+@import "components/selectWithSectionsComponent";
+@import "components/uploaderMultipleFilesComponent";
+
+/*** font awesome styles ***/
+@import "./fontAwesome/fontawesome";
+@import "./fontAwesome/solid";

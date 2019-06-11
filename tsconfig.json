@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "commonjs",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "outDir": "./dist/js",
+    "allowJs": true,
+    "noImplicitAny": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "./src/customTypes"
+    ],
+    "lib": [
+      "dom",
+      "es7"
+    ]
+  },
+  "filesGlob": [
+    "typings/index.d.ts",
+    "src/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "include": ["src/**/*"],
+  "exclude": [
+    "**/*.spec.ts",
+    ".npm",
+    "./dist",
+    "node_modules"
+  ]
+}

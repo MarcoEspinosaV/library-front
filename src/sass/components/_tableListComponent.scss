@@ -1,0 +1,99 @@
+.table-list-component{
+  .table-row{
+    &.hover{
+      @include transition(all .3s);
+      background: $color-white;
+      &.active{
+        background: color('secondary', 'lighten-5');
+      }
+      @media #{$small-and-up} {
+        &:hover{
+          cursor: pointer;
+          background: color('secondary', 'lighten-5');
+        }
+      }
+    }
+    .boolean{
+      display: inline-block;
+      float: left;
+      width: 16px;
+      height: 16px;
+      border: 1px solid color('secondary', 'lighten-4');
+      background: $color-white;
+      position: relative;
+      &.active{
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          top: 2px;
+          left: 2px;
+          background: $color-primary;
+        }
+      }
+    }
+    .switch-container{
+      @media #{$small-and-up} {
+        &:hover{
+          opacity: .8;
+          .switch-text{
+            font-weight: 700;
+            color: $color-primary;
+          }
+        }
+      }
+      .switch{
+        display: inline-block;
+        float: left;
+        width: 24px;
+        border-radius: 16px;
+        height: 16px;
+        background: color('secondary', 'lighten-5');
+        position: relative;
+        @include transition(all .3s);
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          width: 12px;
+          height: 12px;
+          border-radius: 6px;
+          top: 2px;
+          left: 2px;
+          background: $color-white;
+          @include transition(all .3s);
+        }
+        &.ACTIVE{
+          background: $color-primary;
+          &:after{
+            left: 10px;
+          }
+        }
+      }
+      .switch-text{
+        line-height: 16px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding-left: 30px;
+        box-sizing: border-box;
+      }
+    }
+    img{
+      width: 100%;
+      max-width: 70px;
+      height: auto;
+    }
+  }
+  &.SIMPLE{
+    .table-list-content{
+      border: none!important;
+      .column-name{
+        color: color('secondary', 'lighten-1')!important;
+      }
+    }
+  }
+}

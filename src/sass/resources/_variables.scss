@@ -1,0 +1,135 @@
+$radio-big: 12px;
+$radio-primary: 5px;
+
+$font-muli-path: "../fonts/muli/" !default;
+$font-poppins-path: "../fonts/poppins/" !default;
+
+/*** Breakpoints ***/
+
+$screen-small-down: 769px !default;
+$screen-small-up: 770px !default;
+
+$screen-medium-down: 1023px !default;
+$screen-medium-up: 1024px !default;
+
+$screen-large-down: 1299px !default;
+$screen-large-up: 1300px !default;
+
+$screen-extra-large-down: 1440px !default;
+$screen-extra-large-up: 1441px !default;
+
+/*** Media Query Ranges ***/
+
+$small-and-down: "only screen and (max-width : #{$screen-small-down})" !default;
+$small-and-up: "only screen and (min-width : #{$screen-small-up})" !default;
+
+$medium-and-down: "only screen and (max-width : #{$screen-medium-down})" !default;
+$medium-and-up: "only screen and (min-width : #{$screen-medium-up})" !default;
+$only-medium-and-large: "only screen and (min-width : #{$screen-medium-up}) and (max-width : #{$screen-large-down})" !default;
+
+$large-and-down: "only screen and (max-width : #{$screen-large-down})" !default;
+$large-and-up: "only screen and (min-width : #{$screen-large-up})" !default;
+
+$only-large: "only screen and (min-width : #{$screen-large-up}) and (max-width : #{$screen-extra-large-down})" !default;
+
+$extra-large-and-down: "only screen and (max-width : #{$screen-extra-large-down})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$screen-extra-large-up})" !default;
+
+/*** Grid Variables ***/
+
+$base-rem-size: 15px;
+$num-cols: 12 !default;
+$gutter-width: 2rem !default;
+$element-top-margin: $gutter-width/2 !default;
+$element-bottom-margin: $gutter-width/2 !default;
+$container-max-width: 1280px;
+
+/*** Typography ***/
+
+$primary-font:  "Muli";
+$secondary-font: "Poppins";
+
+// Header Styles
+$fontsize-h1: 28px !default;
+$fontsize-h2: 26px !default;
+$fontsize-h3: 22px !default;
+$fontsize-h4: 16px !default;
+
+// Header Styles small screen
+$fontsize-small-h1: 28px !default;
+$fontsize-small-h2: 22px !default;
+$fontsize-small-h3: 19px !default;
+$fontsize-small-h4: 17px !default;
+
+$fontsize-defaul: 14px;
+$fontsize-medium: 12px;
+$fontsize-small-defaul: 14px;
+$fontsize-small: 11px;
+$fontsize-small-small: 11px;
+$fontsize-extra-small: 10px;
+
+/*shadows*/
+$z-depth-0: none !important;
+$z-depth-1: 0 4px 16px 0 rgba(147, 147, 156, 0.6);
+$z-depth-2: 0 4px 8px 0 rgba(232, 233, 237, 0.5);
+$z-depth-2-5: 0 4px 8px 0 rgba(185, 187, 197, 0.5);
+$z-depth-3: 0 8px 40px 0 rgba(0, 0, 0, 0.5);
+
+/*** color ***/
+
+$divider-color: color('secondary', 'lighten-4');
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "gray": true,
+        "success": true
+), 'bg')
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "success": true
+), 'text')
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "success": true
+), 'border')
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "success": true
+), 'link')
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "success": true
+), 'gradient')
+
+@include useColors((
+        "primary": true,
+        "secondary": true,
+        "warning": true,
+        "danger": true,
+        "info": true,
+        "success": true
+), 'fill')

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Muli";
+  src: url('#{$font-muli-path}Muli-Regular.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url('#{$font-muli-path}Muli-Bold.ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url('#{$font-muli-path}Muli-Light.ttf');
+  font-weight: 300;
+}

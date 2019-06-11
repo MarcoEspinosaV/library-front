@@ -1,0 +1,30 @@
+.alert{
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  top: 0;
+  .alert-item{
+    padding: .7rem 1rem 1rem;
+    background: $color-white;
+    border-radius: .5rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-right:  1rem;
+    white-space: nowrap;
+    width: 300px;
+    @include box-shadow($z-depth-1);
+    position: relative;
+    flex-wrap: nowrap;
+    .icon-alert{
+      height: 35px;
+      width: 35px;
+    }
+    .icon-close{
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+  }
+}

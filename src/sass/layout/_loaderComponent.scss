@@ -1,0 +1,44 @@
+@keyframes progress_loader  {
+  0% {
+    left:0;
+  }
+  100% {
+    left:-200%;
+  }
+}
+
+.loader-component{
+  position: absolute;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  .loading-container{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    background: rgba(255,255,255, .1);
+    .loader{
+      width: 300%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      background: #ff004d;
+      background: -moz-linear-gradient(left, #ff004d 0%, #53a0fd 12%, #51da14 23%, #d8a200 35%, #51da14 45%, #53a0fd 55%, #ff004d 66%, #53a0fd 78%, #51da14 89%, #d8a200 99%);
+      background: -webkit-linear-gradient(left, #ff004d 0%,#53a0fd 12%,#51da14 23%,#d8a200 35%,#51da14 45%,#53a0fd 55%,#ff004d 66%,#53a0fd 78%,#51da14 89%,#d8a200 99%);
+      background: linear-gradient(to right, #ff004d 0%,#53a0fd 12%,#51da14 23%,#d8a200 35%,#51da14 45%,#53a0fd 55%,#ff004d 66%,#53a0fd 78%,#51da14 89%,#d8a200 99%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff004d', endColorstr='#d8a200',GradientType=1 );
+      animation-name: progress_loader;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: none;
+      animation-play-state: running;
+
+    }
+  }
+}

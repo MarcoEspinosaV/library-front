@@ -1,0 +1,23 @@
+$card-allocation-avatar-width-modal: 130;
+
+.student-detail-modal{
+  .header-student-detail{
+    .image-container-modal{
+      width: #{$card-allocation-avatar-width-modal + 15}px;
+      .image-modal{
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 50%;
+        width: #{$card-allocation-avatar-width-modal}px;
+        height: #{$card-allocation-avatar-width-modal}px;
+        &.FEMALE{
+          border-color: $color-danger;
+          background-color: color('danger', 'lighten-2');
+        }
+      }
+    }
+  }
+}

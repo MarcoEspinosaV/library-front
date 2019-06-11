@@ -1,0 +1,192 @@
+$tab-height: 48px;
+.tabs-nav-component{
+  .label-item{
+    height: $tab-height;
+    padding: 0;
+    background: $color-white;
+    color: color('secondary', 'lighten-2');
+    min-width: 200px;
+    box-sizing: border-box;
+    border-right: 1px solid color('secondary', 'lighten-3');
+  }
+  .tab-item{
+    min-width: 130px;
+    max-width: 180px;
+    box-sizing: border-box;
+    position: relative;
+    height: $tab-height;
+    padding: 0;
+    background: color('secondary', 'lighten-4');
+    border-right: 1px solid color('secondary', 'lighten-3');
+    &:last-child{
+      border-right: 0;
+    }
+    &.error-tab{
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: 0;
+        height: 3px;
+        background: $color-warning;
+        width: 100%;
+      }
+    }
+    .error-icon{
+      position: absolute;
+      right: 15px;
+      top: 15px;
+    }
+    .error-text{
+      font-family: $primary-font;
+      position: absolute;
+      bottom: -20px;
+      left: 15px;
+      width: calc(100% - 30px);
+      box-sizing: border-box;
+      font-size: $fontsize-extra-small;
+      color: $color-warning;
+    }
+    &.active-tab{
+      background: none transparent;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        height: 3px;
+        background: $color-primary;
+        width: 100%;
+      }
+      .input-reference, .input-tab-nav{
+        color: $color-secondary;
+      }
+    }
+    &.focus-tab{
+      background: color('secondary', 'lighten-6');
+      .input-tab-nav{
+        opacity: 1;
+        pointer-events: inherit;
+        &::placeholder{
+          color: color('secondary', 'lighten-3');
+          font-weight: 300;
+        }
+      }
+      .input-reference{
+        color: rgba($color-secondary, 0);
+      }
+    }
+    .input-reference, .input-tab-nav{
+      font-size: 12px;
+      font-weight: 700;
+      height: $tab-height;
+      font-family: $primary-font;
+      padding: 0 1rem;
+      color: color('secondary', 'lighten-2');
+    }
+    .input-reference{
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      align-items: normal;
+      .tool-tip{
+        display: none;
+        position: fixed;
+        width: 200px;
+        height: auto;
+        min-height: 50px;
+        border: 1px solid color('secondary', 'lighten-3');
+        white-space: pre-wrap;
+        overflow: hidden;
+        padding: 1rem;
+        background: $color-white;
+        z-index: 499;
+        border-radius: 5px;
+        top: 174px;
+        color: $color-secondary;
+        &.active{
+          display: block;
+        }
+      }
+    }
+    .input-tab-nav{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      border: 0;
+      box-sizing: border-box;
+      background: none transparent;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &.active-subnav{
+      background: $color-white;
+      @include box-shadow($z-depth-1);
+      .edit-options {
+        .option-list {
+          display: block;
+          z-index: 10;
+        }
+      }
+    }
+    .edit-options{
+      @media #{$small-and-up} {
+        &:hover{
+          path{
+            fill: $color-primary!important;
+          }
+        }
+      }
+      &.opacity-0{
+        opacity: 0;
+        pointer-events: none;
+      }
+      .option-list{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 42px;
+        background: $color-white;
+        border-radius: $radio-primary;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include box-shadow($z-depth-1);
+        li{
+          padding: .5rem 1rem;
+          font-size: $fontsize-medium;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+  &.SIMPLE{
+    .tab-item{
+      background: transparent;
+      border: 0;
+    }
+  }
+  &.NO_BACKGROUND{
+    .tab-item{
+      background: transparent;
+      font-weight: 500;
+    }
+    .input-reference, .input-tab-nav{
+      color: $color-secondary;
+    }
+  }
+  &.SIMPLE_NO_BORDER{
+    .tab-item{
+      background: transparent;
+      font-weight: 500;
+      border: 0;
+    }
+    .input-reference, .input-tab-nav{
+      color: $color-secondary;
+    }
+  }
+}

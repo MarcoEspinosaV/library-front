@@ -1,0 +1,31 @@
+.selector-with-sections{
+  .container-main-image{
+    height: 50px;
+    width: 50px;
+    background: color('secondary', 'lighten-4');
+    border-radius: 80px;
+    .main-image{
+      padding-left: 5px;
+      width: 40px
+    }
+  }
+  .options-selector-list{
+    border-radius: 5px;
+    background: $color-white;
+    z-index: 499;
+    position: absolute;
+    width: calc(100% + 100px);
+    left: -105px;
+    .custom-icon-size{
+      width: 40px;
+      height: 40px;
+      border-radius: 80px;
+      &.MALE{
+        border: 3px solid $color-primary;
+      }
+      &.FEMALE{
+        border: 3px solid $color-danger;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .mainStyle{
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .iconStyle{
+        height: 55px;
+        width: 120px;
+    }
+    .titleStyle{
+        margin-top: 15px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-family: 'Poppins',serif;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #333337;
+        width: 100%;
+    }
+    .messageStyle{
+        width: 100%;
+        font-family: 'Muli',serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #647177
+    }
+    .buttonSyle{
+        margin: 30px 0;
+        font-weight: 600;
+        border-radius: 4px;
+        background: #4382ff;
+        color: white;
+        text-align: center;
+        padding: 15px 55px;
+        font-family: 'Poppins',serif;
+        letter-spacing: 2px;
+    }
+    .footerMessage{
+        margin-bottom: 15px;
+    }
+</style>
+<body>
+<div class="mainStyle">
+    <div class="iconStyle">
+        <img src="../../images/brand.svg" alt="">
+    </div>
+    <div class="titleStyle"> BIENVENIDO A IDUKAY </div>
+    <div class="messageStyle">
+        Hola <%= nombre %>, recibiste una invitación de <%= schoolName %> para iniciar el registro de estudiantes.
+    </div>
+    <a href="<%= invitationUrl %>" class="buttonSyle">
+        INICIAR REGISTRO
+    </a>
+    <div class="messageStyle footerMessage"> Si tienes preguntas contáctanos a soporte@idukay.com </div>
+    <div class="messageStyle footerMessage"> Saludos, </div>
+    <div class="messageStyle footerMessage"> Janine Leal </div>
+    <div class="messageStyle footerMessage"> Soporte Idukay </div>
+    </div>
+</body>
+</html>

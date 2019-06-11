@@ -1,0 +1,9 @@
+$search-height: 32px;
+.search-component{
+      height: $search-height;    
+      .search-input{
+        &::placeholder{
+          color: color('secondary', 'lighten-3');
+        }
+      }  
+  }

@@ -1,0 +1,133 @@
+.structure{
+  display: block;
+  width: 100%
+}
+
+//////styles for edit mode
+
+&.edit-mode{
+  .structure{
+    border-bottom: 2px dashed $border-light;
+    &:last-child{
+      border-bottom: 0;
+    }
+    .structure-column{
+      min-height: 150px;
+      border-left: 2px dashed $border-light;
+      position: relative;
+      &:first-child{
+        border-left: 0;
+      }
+      .btn-options{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+      }
+      padding-bottom: 5rem;
+    }
+    .structure-config{
+      background: color('gray', 'lighten-1');
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 2rem 1rem .5rem;
+      .lef-config-nav{
+        flex: 1;
+      }
+      .remove-button{
+        position: relative;
+        margin-top: -.5rem;
+      }
+    }
+    .main-structure-item{
+      position: relative;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      &.padding-component{
+        padding: 30px 0;
+      }
+      .component-config{
+        position: absolute;
+        opacity: .3;
+        right: 2px;
+        top: -30px;
+        z-index: 9;
+        .btn-options{
+          position: relative;
+          right: 0;
+          bottom: 0;
+        }
+      }
+      &:hover{
+        .component-config{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .col-config{
+    position: relative;
+    .label{
+      position: absolute;
+      left: 0;
+      background: none transparent;
+      font-size: 9px;
+      padding: 0;
+      top: -1.5rem;
+      color: $color-primary;
+    }
+  }
+  .col-config{
+    display: inline-block;
+    align-items: center;
+    background: $color-white;
+    border-radius: 5px;
+    margin-left: 1rem;
+    .col-config-button{
+      display: inline-block;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      padding: 0.3rem;
+      float: left;
+      &.active{
+        i{
+          background: $color-primary;
+          border-color: transparent;
+        }
+      }
+      i{
+        height: 1.9rem;
+        float: left;
+        border-radius: 2px;
+        display: inline-block;
+        margin: 1px;
+        border: 1px dotted color('secondary', 'lighten-2');
+        &.icon-col-1{
+          width: 40px;
+          @media #{$small-and-down} {
+            width: 30px;
+          }
+        }
+        &.icon-col-2{
+          width: 20px;
+          @media #{$small-and-down} {
+            width: 15px;
+          }
+        }
+        &.icon-col-3{
+          width: 13px;
+          @media #{$small-and-down} {
+            width: 10px;
+          }
+        }
+        &.icon-col-4{
+          width: 10px;
+          @media #{$small-and-down} {
+            width: 7px;
+          }
+        }
+      }
+    }
+  }
+}

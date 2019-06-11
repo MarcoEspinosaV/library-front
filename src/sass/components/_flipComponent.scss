@@ -1,0 +1,76 @@
+.flip-component{
+  &.flip{
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    &.active{
+      .flip-content{
+        .content-back {
+          transform: rotateY(0deg);
+        }
+        .content-front {
+          transform: rotateY(180deg);
+        }
+      }
+    }
+    .flip-content{
+      transition: 0.6s;
+      transform-style: preserve-3d;
+      position: relative;
+      .content-front, .content-back{
+        width: 100%;
+        backface-visibility: hidden;
+        transition: 0.6s;
+        transform-style: preserve-3d;
+        top: 0;
+        left: 0;
+      }
+      .content-front {
+        position: relative;
+        z-index: 2;
+        transform: rotateY(0deg);
+      }
+      .content-back {
+        position: absolute;
+        transform: rotateY(-180deg);
+      }
+    }
+  }
+  &.intro{
+    &.active{
+      .flip-content{
+        .content-back {
+          top: 0;
+          opacity: 1;
+        }
+        .content-front {
+          top: 1000px;
+          opacity: 0;
+        }
+      }
+    }
+    .flip-content{
+      overflow: hidden;
+      transition: all .5s;
+      position: relative;
+      .content-front, .content-back{
+        position: relative;
+        transition: all 0.6s;
+        top: 0;
+        left: 0;
+      }
+      .content-front {
+        position: relative;
+        z-index: 2;
+        top: 0;
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+      .content-back {
+        width: 100%;
+        position: absolute;
+        top: 1000px;
+        opacity: 0;
+      }
+    }
+  }
+}

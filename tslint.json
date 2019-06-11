@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "rules": {
+    "prettier": true,
+    "eofline": false,
+    "arrow-parens": false,
+    "object-curly-spacing": false,
+    "trailing-comma": false,
+    "variable-name": [true, "check-format", "allow-pascal-case"],
+    "no-submodule-imports": false,
+    "member-access": false,
+    "jsx-no-lambda": false,
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}

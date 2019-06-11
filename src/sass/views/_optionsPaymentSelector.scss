@@ -1,0 +1,21 @@
+.options-payment-selector{
+  position: relative;
+  .option-item{
+    .extra-information-text{
+      margin-left: 3px;
+      margin-right: .6rem;
+      position: relative;
+      &:before{
+        content: '.';
+        position: absolute;
+        bottom: 20%;
+        left: calc(100% + 3px);
+      }
+    }
+  }
+  .error-label{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

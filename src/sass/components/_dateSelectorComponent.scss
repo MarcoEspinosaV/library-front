@@ -1,0 +1,67 @@
+.date-selector{
+  .label-error{
+    color: $color-warning!important;
+  }
+  .subLabel{
+    position: absolute;
+    bottom: 0;
+    right: 0.6rem;
+  }
+  .error{
+    position: absolute;
+    top: calc(100% - 15px);
+  }
+  .error-icon{
+    position: absolute;
+    top: 0;
+    right: 9px;
+    transform: scale(0);
+    opacity: 0;
+    @include transition(all .5s);
+    &.active-error-icon{
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  &.FULL{
+    background: color('secondary', 'lighten-5');
+    border: 1px solid color('secondary', 'lighten-3');
+    border-radius: $button-radius;
+    padding: 0.5rem 0;
+    height: 60px;
+    margin-bottom: 1rem!important;
+    label{
+      top: 10px;
+      left: .5rem;
+      position: absolute;
+      width: 100%;
+      .label-error{
+        color: $color-warning!important;
+      }
+      .active-error-icon{
+        right: 15px;
+      }
+    }
+    .error{
+      position: absolute;
+      top: 100%;
+      bottom: -20px;
+    }
+    &.error{
+      border-color: $color-warning;
+    }
+    .DATE_FULL{
+      margin-top: 7px!important;
+    }
+  }
+  .select-component{
+    margin: 0!important;
+    input{
+      padding: .5rem!important;
+    }
+  }
+  .error{
+    position: absolute;
+    top: calc(100% - 15px);
+  }
+}

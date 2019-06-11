@@ -1,0 +1,9 @@
+.parent-layout{
+  .footer-parent-layout{
+    display: flex;
+    justify-content: space-between;
+    &.only-one{
+      justify-content: flex-end;
+    }
+  }
+}

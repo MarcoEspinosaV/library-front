@@ -1,0 +1,15 @@
+$header-height: 80px;
+.header-componente{
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 499;
+  .main-header-content{
+    height: $header-height;
+    .brand{
+      width: 130px;
+      height: 45px;
+    }
+  }
+}

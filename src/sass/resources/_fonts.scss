@@ -1,0 +1,170 @@
+html{
+  font-size: $base-rem-size;
+}
+body{
+  font-size: $fontsize-defaul;
+  color: color('secondary', 'base');
+  line-height: 125%;
+  font-family: $primary-font;
+  font-weight: 500;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-defaul;
+  }
+}
+h1, h2, h3, h4, .size-h1, .size-h2, .size-h3, .size-h4{
+  font-family: $secondary-font;
+  line-height: 125%;
+  font-weight: 300;
+  margin: .5em 0;
+}
+
+// Header Styles
+
+h1, .size-h1, .size-1{
+  font-size: $fontsize-h1;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-h1;
+  }
+}
+h2, .size-h2, .size-2{
+  font-size: $fontsize-h2;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-h2;
+  }
+}
+h3, .size-h3, .size-3{
+  font-size: $fontsize-h3;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-h3;
+  }
+}
+h4, .size-h4, .size-4{
+  font-size: $fontsize-h4;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-h4;
+  }
+}
+
+.secondary-font{
+  font-family: $secondary-font!important;
+}
+
+.primary-font{
+  font-family: $primary-font!important;;
+}
+
+// Text Styles
+em, .italic {
+  font-style: italic;
+  font-family: $secondary-font;
+}
+
+strong, .strong { font-weight: 700; }
+.extra-strong { font-weight: 800; }
+.light { font-weight: 300; }
+.regular { font-weight: 500; }
+.regular-strong { font-weight: 600; }
+
+small, .small, .size-small {
+  font-size: $fontsize-small;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-small
+  }
+}
+
+.size-custom-small {
+  font-size: $fontsize-medium;
+}
+
+.size-extra-small {
+  font-size: $fontsize-extra-small;
+}
+
+.size-default {
+  font-size: $fontsize-defaul;
+  @media #{$small-and-down} {
+    font-size: $fontsize-small-defaul;
+  }
+}
+.size-medium{
+  font-size: $fontsize-medium!important;
+}
+
+.text-lowercase{
+  text-transform: lowercase;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}
+.text-uppercase{
+  text-transform: uppercase !important;
+}
+
+.truncate {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Text Align
+.align-left {
+  text-align: left!important;
+}
+.align-right {
+  text-align: right!important;
+}
+.align-center {
+  text-align: center!important;
+}
+
+.align-left-small {
+  @media #{$small-and-down} {
+    text-align: left!important;
+  }
+}
+.align-right-small {
+  @media #{$small-and-down} {
+    text-align: right!important;
+  }
+}
+.align-center-small {
+  @media #{$small-and-down} {
+    text-align: center!important;
+  }
+}
+.align-center-meddium {
+  @media #{$medium-and-down} {
+    text-align: center!important;
+  }
+}
+
+.line-height-small{
+  line-height: 100%;
+}
+.line-height-regular{
+  line-height: 125%;
+}
+.line-height-large{
+  line-height: 175% ;
+}
+
+.letter-spacing-0{
+  letter-spacing: 0;
+}
+
+.letter-spacing-1x{
+  letter-spacing: 1px;
+}
+
+.letter-spacing-2x{
+  letter-spacing: 2px;
+}
+
+.wrap{
+  white-space: normal;
+}
+
+.no-wrap{
+  white-space: nowrap;
+}

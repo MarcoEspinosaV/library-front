@@ -1,0 +1,16 @@
+.global-fade-transitions{
+  &.global-fade-transitions-enter{
+    @include transition(all .3s);
+    opacity: 0;
+    &.global-fade-transitions-enter-active{
+      opacity: 1;
+    }
+  }
+  &.global-fade-transitions-exit{
+    @include transition(all .3s);
+    opacity: 1;
+    &.global-fade-transitions-exit-active{
+      opacity: 0;
+    }
+  }
+}

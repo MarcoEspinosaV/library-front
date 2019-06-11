@@ -1,0 +1,51 @@
+$progress-height: 16;
+$progress-height-small: 8;
+.progress-component{
+  .bar-bg{
+    height: #{$progress-height}px;
+    border-radius: #{$progress-height / 2}px;
+    .percent{
+      height: #{$progress-height}px;
+    }
+    .tooltip-component{
+      &:first-child{
+        .percent{
+          border-top-left-radius: #{$progress-height / 2}px;
+          border-bottom-left-radius: #{$progress-height / 2}px;
+        }
+      }
+      &:last-child{
+        .percent{
+          border-top-right-radius: #{$progress-height / 2}px;
+          border-bottom-right-radius: #{$progress-height / 2}px;
+        }
+      }
+    }
+  }
+  &.small{
+    .bar-bg{
+      height: #{$progress-height-small}px;
+      border-radius: #{$progress-height / 2}px;
+      .percent{
+        height: #{$progress-height-small}px;
+      }
+      .tooltip-component{
+        display: flex;
+        &:first-child{
+          .percent{
+            background: $color-warning!important;
+            border-top-left-radius: #{$progress-height-small / 2}px;
+            border-bottom-left-radius: #{$progress-height-small / 2}px;
+          }
+        }
+        &:last-child{
+          .percent{
+            background: $color-warning!important;
+            border-top-right-radius: #{$progress-height-small / 2}px;
+            border-bottom-right-radius: #{$progress-height-small / 2}px;
+          }
+        }
+      }
+    }
+  }
+}

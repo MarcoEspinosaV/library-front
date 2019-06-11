@@ -1,0 +1,21 @@
+.wizard-component{
+  max-width: 300px;
+  width: 100%;
+  @include box-shadow($z-depth-2);
+  .icon-step-complete{
+    height: 28px;
+    width: 28px;
+  }
+  .number-step-item{
+    border: 2px solid color('secondary', 'lighten-2');
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    padding: .3rem;
+    color: color('secondary', 'lighten-2');
+    &.active{
+      border: 3px solid $color-danger;
+      color: $color-secondary;
+    }
+  }
+}

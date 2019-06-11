@@ -1,0 +1,50 @@
+.icon-extra-extra-small{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  svg{
+    float: left;
+    width: 14px!important;
+    height: 14px!important;
+  }
+}
+.icon-extra-small{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  svg{
+    float: left;
+    width: 16px!important;
+    height: 16px!important;
+  }
+}
+.icon-small{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  svg{
+    float: left;
+    width: 20px!important;
+    height: 20px!important;
+  }
+}
+.icon-big{
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  svg{
+    float: left;
+    width: 128px!important;
+    height: 128px!important;
+  }
+}
+.svg-icon{
+  svg{
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+@import "./studentApplicationBlocks/studiesPlan";
+@import "./studentApplicationBlocks/stepTwo";
+@import "./studentApplicationBlocks/step_three";
+@import "./studentApplicationBlocks/stepFour";
+
+.student-application{
+  max-width: $container-max-width;
+  margin-top: $header-height!important;
+  .card-container{
+    @media #{$medium-and-up} {
+      display: flex;
+      justify-content: space-around;
+    }
+    .card-form{
+      @include box-shadow($z-depth-2);
+      .form-container{
+        @media #{$small-and-up} {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+        .button-form{
+          width: 180px;
+        }
+      }
+    }
+  }
+}

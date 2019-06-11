@@ -1,0 +1,134 @@
+.multi-level-options-select {
+  .input-content {
+    border-bottom: 2px solid color('secondary', 'lighten-2');
+    .input-select {
+      border: none;
+      padding: .5rem;
+      width: 87%;
+      &::placeholder {
+        color: $input-placeholder-color;
+        font-weight: 300;
+        font-family: $primary-font;
+      }
+    }
+    .icon-arrow-down {
+      position: absolute;
+      right: .5rem;
+      bottom: .3rem;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  &.FULL {
+    width: 275px;
+    height: 60px;
+    border: 1px solid color('secondary', 'lighten-3');
+    border-radius: $button-radius;
+    background: color('secondary', 'lighten-5');
+    position: relative;
+    label {
+      position: absolute;
+      text-transform: capitalize !important;
+      padding-left: .5rem !important;
+      padding-top: .3rem !important;
+      font-weight: 700;
+      letter-spacing: 1px;
+      z-index: 2;
+    }
+    .icon-error-selector {
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      z-index: 499;
+    }
+    .input-content {
+      border: none;
+      input {
+        padding-top: 1.4rem !important;
+        width: 233px;
+        height: 20px;
+        border-radius: $button-radius;
+        background: color('secondary', 'lighten-5');
+      }
+      .icon-arrow-down {
+        position: absolute;
+        right: .5rem;
+        bottom: .5rem;
+      }
+    }
+    &.error {
+      border-color: $color-warning;
+      label {
+        color: $color-warning;
+      }
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+  .options-list {
+    position: absolute;
+    background: $color-white;
+    max-height: 300px;
+    z-index: 10;
+    color: $color-secondary;
+    display: none;
+    .item-hover {
+      &:hover {
+        background: color('secondary', 'lighten-5');
+      }
+    }
+    .parent-item-list {
+      &:focus {
+        outline: none;
+      }
+    }
+    .children-item-list {
+      &:focus {
+        outline: none;
+      }
+    }
+    &.active {
+      display: block;
+    }
+    &.scroll-area {
+      overflow-y: auto;
+      overflow-x: hidden;
+      @media #{$small-and-up} {
+        /* width */
+        &::-webkit-scrollbar {
+          width: 6px;
+        }
+        &::-webkit-scrollbar-button {
+          width: 6px;
+          height: 0;
+          opacity: 0;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+          background: rgba($color-primary, .1);
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+          background: $color-primary;
+          border-radius: 3px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+          background: lighten($color-primary, 40%);
+        }
+      }
+    }
+    @include box-shadow($z-depth-1);
+    overflow-x: hidden;
+    .item-list{
+      &:last-child{
+        .sub-item-list{
+          &:last-child{
+            border: none;
+          }
+        }
+      }
+    }
+  }
+}

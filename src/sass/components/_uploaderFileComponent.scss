@@ -1,0 +1,65 @@
+.uploader-file{
+  max-width: 260px;
+  width: 100%;
+  height: 210px;
+  border-width: 1px;
+  &.uploaded{
+    padding: 0!important;
+  }
+  .fileName{
+    display: none;
+    &.active{
+      display: block;
+      z-index: 499;
+      margin-top: .5rem;
+      margin-left: .5rem;
+    }
+  }
+  .icon-garbage{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    height: 40px;
+    width: 30px;
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+  .img-container{
+    z-index: 499;
+  }
+  .image-profile{
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    &.hover{
+      opacity: .9;
+    }
+  }
+  .uploader-image-container{
+    &.inactive{
+      display: none;
+    }
+  }
+  .uploader-file-input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  .icon-upload-img{
+    width: 50px;
+    height: 50px;
+  }
+  .text-uploader{
+    width: 225px;
+  }
+}

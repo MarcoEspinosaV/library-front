@@ -1,0 +1,187 @@
+$card-allocation-avatar-width: 88;
+.card-allocation-container{
+  position: relative;
+  border: 2px solid transparent;
+  @include transition(all .7s);
+  .card-allocation-image-container{
+    width: #{$card-allocation-avatar-width + 15}px;
+    overflow: hidden;
+    .card-allocation-image{
+      margin-right: 15px;
+      width: #{$card-allocation-avatar-width}px;
+      height: #{$card-allocation-avatar-width}px;
+      border-radius: 50%;
+      display: block;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      position: relative;
+      @include transform(scale(1));
+      right: 0;
+      @include transition(all .3s);
+      &.FEMALE{
+        border-color: $color-danger;
+        background-color: color('danger', 'lighten-2');
+      }
+    }
+    @media #{$large-and-down} {
+      display: none;
+    }
+  }
+  .card-allocation-text-container{
+    max-width: calc(100% - #{$card-allocation-avatar-width + 15}px);
+    @media #{$large-and-down} {
+      max-width: 100%;
+    }
+    .tooltip-list{
+      position: relative;
+      z-index: 2;
+    }
+    .tooltip-status{
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+      &.success-indicator{
+        background-color: color('success', 'lighten-2');
+      }
+      &.warning-indicator{
+        background-color: $color-warning;
+      }
+      &.info-indicator{
+        background-color: $color-info;
+      }
+    }
+    .status-label{
+      display: inline-block;
+      font-size: 10px;
+      text-transform: uppercase;
+      border-width: 1px;
+      padding: 3px 3px 2px;
+      border-radius: 3px;
+      border-style: solid;
+      line-height: 100%;
+      font-weight: 700;
+      font-family: $secondary-font;
+      border-color: color('secondary', 'lighten-3');
+      color: color('secondary', 'lighten-3');
+      &.ACCEPTED{
+        border-color: color('success', 'lighten-2');
+        color: color('success', 'lighten-2');
+      }
+      &.EXPIRED{
+        border-color: $color-warning;
+        color: $color-warning;
+      }
+      &.PENDING{
+        border-color: color('secondary', 'lighten-3');
+        color: color('secondary', 'lighten-3');
+      }
+      &.REJECTED{
+        border-color: $color-danger;
+        color: $color-danger;
+      }
+      &.SENT{
+        border-color: color('info', 'darken-1');
+        color: color('info', 'darken-1');
+      }
+    }
+  }
+  &.open-side-nav{
+    @media #{$only-large} {
+      .card-allocation-image-container{
+        width: 0;
+        .card-allocation-image{
+          display: none;
+        }
+      }
+      .card-allocation-text-container{
+        max-width: 100%;
+      }
+    }
+  }
+  .option-view-detail{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: calc(100% - #{$card-allocation-avatar-width}px);
+    z-index: 0;
+    cursor: move;
+  }
+  .options-nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    width: 0;
+    overflow: hidden;
+    height: 100%;
+    border-top-left-radius: $radio-big;
+    border-bottom-left-radius: $radio-big;
+    @include linear-gradient-deg(left, rgba(255,255,255,1) 25%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+    @include transition(all .3s);
+    &.option-delete{
+      @include linear-gradient-deg(left, rgba(255,255,255,1) 55%, rgba(255,255,255,.65) 85%, rgba(255,255,255,0) 100%);
+    }
+    .option-list{
+      width: #{$card-allocation-avatar-width}px;
+      opacity: 0;
+      @include transition(all .4s);
+      .icon-selected{
+        display: block;
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: color('secondary', 'lighten-3');
+        border-radius: 50%;
+        background: $color-white;
+        cursor: pointer;
+        line-height: 27px;
+        text-align: center;
+        &:hover{
+          border-color: $color-primary;
+        }
+        &.active{
+          background: $color-primary;
+          border-color: $color-primary;
+        }
+        .svg-icon{
+          display: inline-block;
+          float: none;
+        }
+      }
+    }
+  }
+  &.card-preselect{
+    border-color: $color-primary;
+    .options-nav{
+      @include linear-gradient-deg(left, rgba(255,255,255,1) 25%, rgba(255,255,255,.6) 50%, rgba(255,255,255,0) 100%);
+      .delete-button{
+        display: none;
+      }
+    }
+  }
+  &:hover, &.card-preselect{
+    @include box-shadow($z-depth-2-5);
+    .options-nav{
+      padding-left: 10px;
+      overflow: inherit;
+      width: #{$card-allocation-avatar-width}px;
+      .option-list{
+        opacity: 1;
+      }
+    }
+    &.hovered-card{
+      .card-allocation-image-container {
+        .card-allocation-image {
+          right: -5px;
+        }
+      }
+    }
+  }
+}

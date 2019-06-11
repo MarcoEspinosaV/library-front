@@ -1,0 +1,10 @@
+.gender-selector{
+  .selector-item{
+    width: 50%;
+  }
+  &.error{
+    label{
+      color: $color-warning;
+    }
+  }
+}

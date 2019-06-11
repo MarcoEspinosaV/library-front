@@ -1,0 +1,75 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-primary: #4382ff;
+$color-secondary: #273545;
+// $color-secondary: #263546;
+// $color-secondary: #3D4248;
+$color-danger: #ff004d;
+$color-warning: #d8a200;
+$color-success: #51da14;
+$color-info: #53a0fd;
+$color-gray: #647287;
+
+$gray: (
+        "lighten-1":  #f9f9f9,
+        "base":       $color-gray,
+        "darken-1":   #515966
+);
+
+$primary: (
+        "base":       $color-primary,
+);
+
+$secondary: (
+        "lighten-6":   #fbfbfd,
+        "lighten-5":   #f5f6fa,
+        "lighten-4":   #e8e9ed,
+        "lighten-3":   #b9bbc5,
+        "lighten-2":   #949ba0,
+        "lighten-1":   #647177,
+        "base":        $color-secondary
+);
+
+$warning: (
+        "base":       $color-warning,
+);
+$danger: (
+        "lighten-2":  #ffb2c9,
+        "lighten-1":  #F8839D,
+        "base":       $color-danger,
+);
+$success: (
+        "lighten-3":  #48c412,
+        "lighten-2":  #51da14,
+        "lighten-1":  #83C76E,
+        "base":       $color-primary,
+);
+$info: (
+        "lighten-2":  #a6d4eb,
+        "lighten-1":  #5CBAFF,
+        "base":       $color-info,
+        "darken-1":   #0db0ff
+);
+
+$colors: (
+        "primary": $primary,
+        "secondary": $secondary,
+        "warning": $warning,
+        "danger": $danger,
+        "info": $info,
+        "success": $success,
+        "gray": $gray
+);
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}

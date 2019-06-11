@@ -1,0 +1,51 @@
+$aside-width: 400px;
+$aside-width-medium: 300px;
+
+.aside-component{
+  position: relative;
+  z-index: 105;
+  width: 0;
+  height: 100%;
+  @include transition(all .5s);
+  @media #{$small-and-down} {
+    position: fixed;
+    width: 100%;
+    left: 100%;
+  }
+  &.active{
+    width: $aside-width;
+    @media #{$medium-and-down} {
+      width: $aside-width-medium
+    }
+    @media #{$small-and-down} {
+      width: 100%;
+      left: 0;
+    }
+    .aside-container{
+      right: 0;
+    }
+  }
+  .aside-container{
+    width: $aside-width;
+    position: fixed;
+    right: -$aside-width;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    @include transition(all .5s);
+    @media #{$medium-and-down} {
+      width: $aside-width-medium;
+      right: -$aside-width-medium;
+    }
+    @media #{$small-and-down} {
+      width: 100%;
+      right: -100%
+    }
+    .close-button{
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
+  }
+}

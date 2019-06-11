@@ -1,0 +1,208 @@
+$select-height: 65px;
+$select-height-no-label: 35px;
+
+.select-component{
+  position: relative;
+  label{
+    min-height: 20px;
+    &.label-error{
+      color: $color-warning;
+    }
+  }
+  .input-container{
+    .select-icon{
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  input{
+    background: none transparent;
+    width: 100%;
+    border-width: 0 0 $border-input-width;
+    border-bottom-color: $border-input-default-color;
+    padding: 1px 15px 5px 1px;
+    font-size: $fontsize-defaul;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    @include transition(all .3s);
+    &:focus{
+      border-bottom-color: $border-input-focus-color;
+    }
+    &.input-warning{
+      border-bottom-color: $border-input-warning-color!important;
+    }
+    &::placeholder{
+      color: $input-placeholder-color;
+      font-weight: 300;
+    }
+  }
+  .error-content{
+    position: absolute;
+    right: 0;
+    bottom: -1.4rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    @include transition(all .3s);
+    &.active-error{
+      max-height: 60px;
+      opacity: 1;
+    }
+  }
+  .error-icon{
+    transform: scale(0);
+    opacity: 0;
+    @include transition(all .5s);
+    &.active-error-icon{
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .options-select {
+    position: absolute;
+    top: calc(#{$select-height} - 20px);
+    max-height: 300px;
+    width: 100%;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    @include box-shadow($z-depth-1);
+    &.no-label {
+      top: calc(#{$select-height-no-label})
+    }
+    &.active {
+      display: block;
+    }
+    .select-item{
+      display: block;
+      &:hover, &.active {
+        background: color('secondary', 'lighten-5');
+      }
+    }
+  }
+  &.EDITABLE:focus-within{
+    input{
+      background: color('secondary', 'lighten-5');
+    }
+    label{
+      color: $color-primary;
+    }
+  }
+  &.FULL{
+    background: color('secondary', 'lighten-5');
+    border: 1px solid color('secondary', 'lighten-3');
+    border-radius: $button-radius;
+    padding: .5rem;
+    height: 60px;
+    margin-bottom: 1rem!important;
+    &.input-warning{
+      border-color: $color-warning;
+    }
+    .input-container{
+      .select-icon{
+        bottom: 1px;
+      }
+    }
+    .options-select{
+      top: calc(65px - 16px);
+      left: 0;
+      border-radius: 5px;
+    }
+    label{
+      &.label-error{
+        color: $color-warning;
+      }
+    }
+    input{
+      border: 0;
+      margin: 0;
+      padding: 0!important;
+    }
+    .error-content{
+      position: absolute;
+      right: 0;
+      bottom: -18px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      @include transition(all .3s);
+      &.active-error{
+        max-height: 60px;
+        opacity: 1;
+      }
+    }
+    .error-icon{
+      transform: scale(0);
+      opacity: 0;
+      @include transition(all .5s);
+      &.active-error-icon{
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    &:focus-within{
+      border: 1px solid $color-primary;
+      label{
+        color: $color-primary;
+      }
+    }
+  }
+  &.DATE_FULL{
+    background: transparent;
+    border: 0;
+    padding: .5rem;
+    margin-top: 5px!important;
+    height: 45px;
+    .options-select{
+      left: 0;
+      border-radius: 5px;
+    }
+    .input-container{
+      .select-icon{
+        bottom: 2px;
+      }
+    }
+    label{
+      margin-left: -2px;
+    }
+    input{
+      border: 0;
+      margin: 0;
+      padding: 0!important;
+    }
+
+  }
+  &.SIMPLE{
+    background: transparent;
+    margin: 0!important;
+    height: 40px;
+    .input-container{
+      height: 100%;
+      padding: .5rem;
+      .select-icon{
+        top: calc(50% - 5px);
+      }
+      .svg-icon{
+        right: .5rem;
+      }
+    }
+    .options-select{
+      left: 0;
+      border-radius: 5px;
+    }
+    label{
+      display: none;
+    }
+    input{
+      border: 0;
+      margin: 0;
+      padding: 0!important;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

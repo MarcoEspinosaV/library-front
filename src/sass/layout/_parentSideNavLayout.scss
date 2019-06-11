@@ -1,0 +1,99 @@
+$header-height: 80px;
+.parent-sidenav{
+  margin-top: $header-height;
+  width: $sidenav-width-lg!important;
+  height: 100%;
+  padding-bottom: 80px;
+  .scroll-area-sidenav-parent{
+    display: block;
+    max-height: calc(100% - 67px);
+    height: 100%;
+    .student-detail-sidenav{
+      .student-avatar-container{
+        .student-avatar{
+          display: inline-block;
+          width: 128px;
+          height: 128px;
+          border-radius: 80px;
+          background-size: cover;
+          background-position: center;
+          &.MALE{
+            border: 4px solid $color-primary;
+          }
+          &.FEMALE{
+            border: 4px solid $color-danger;
+          }
+        }
+      }
+      .progress-information-container{
+        .progress-data{
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+    .list-parent-sidenav{
+      .pending-form{
+        pointer-events: none;
+        opacity: .5;
+      }
+    }
+    .link-content{
+      display: flex;
+      border-bottom-right-radius: $button-radius;
+      border-top-right-radius: $button-radius;
+      box-sizing: border-box;
+      &.active{
+        background: $color-white;
+        &:before{
+          content: ' ';
+          position: absolute;
+          height: 39px;
+          width: 8px;
+          background: $color-primary;
+          left: -15px;
+          top: 0;
+        }
+        &:after{
+          content: ' ';
+          position: absolute;
+          height: 39px;
+          width: 7px;
+          background: $color-white;
+          left: -7px;
+          top: 0;
+        }
+      }
+      &.subnav-item{
+        min-height: 39px;
+        padding-left: 50px!important;
+      }
+      .INCOMPLETE{
+        &:before{
+          content: ' ';
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border: 1px solid $color-warning;
+          border-radius: 7px;
+          background: $color-warning;
+          top: 13px;
+          left: 0;
+        }
+      }
+    }
+    .parent-sub-nav{
+      max-height: 0;
+      overflow: hidden;
+      &.active{
+        display: block;
+        max-height: 500px;
+        overflow: inherit;
+      }
+    }
+  }
+  .sidenav-footer{
+    border-top: 1px solid color('secondary', 'lighten-3');
+    width: 100%;
+  }
+}

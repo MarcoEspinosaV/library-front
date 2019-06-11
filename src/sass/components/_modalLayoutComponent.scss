@@ -1,0 +1,33 @@
+.modal-layout-component{
+  .content-area{
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @media #{$small-and-up} {
+      /* width */
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-button{
+        width: 6px;
+        height: 0;
+        opacity: 0;
+      }
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: rgba($color-secondary, .1);
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $color-secondary;
+        border-radius: 3px;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: lighten($color-secondary, 40%);
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.hour-selector{
+  position: relative;
+  .label{
+    margin-bottom: -.9rem;
+  }
+  .icon-error{
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+  .subLabel{
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+  }
+  .error-label{
+    position: absolute;
+    bottom: .7rem;
+    right: 15px;
+  }
+  &.FULL{
+    background: color('secondary', 'lighten-5');
+    border: 1px solid color('secondary', 'lighten-3');
+    border-radius: $button-radius;
+    padding: 0.5rem 0;
+    height: 60px;
+    margin: 1rem 0;
+    .label{
+      text-transform: capitalize!important;
+      letter-spacing: normal!important;
+      top: 10px;
+      left: .5rem;
+      position: absolute;
+      width: 100%;
+    }
+    .row{
+      padding-top: .5rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.cost-table{
+  .header-cost-table{
+    .label-header{
+      width: 200px;
+      border-right: 1px solid color('secondary', 'lighten-3');
+    }
+    .item-header{
+      width: 180px;
+      font-weight: 600;
+      display: flex;
+      .input-item{
+        width: 180px;
+      }
+    }
+  }
+  .structure-list{
+    width: 200px;
+    .structure-item{
+      box-sizing: border-box;
+      border-right: 1px dashed color('secondary', 'lighten-3');
+      height: 40px;
+      width: 200px;
+      .dashed-icon{
+        width: 10px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .structure-list-values{
+    .column-cost{
+      border-right: 1px dashed color('secondary', 'lighten-3');
+    }
+  }
+  .list-item{
+    box-sizing: border-box;
+    &.empty{
+      height: 40px;
+    }
+  }
+}
