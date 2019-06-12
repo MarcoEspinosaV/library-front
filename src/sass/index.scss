@@ -32,13 +32,8 @@
 @import "./layout/parentSideNavLayout";
 
 /*** views styles ***/
-@import "./views/allocationQuotas";
 @import "./views/login";
-@import "./views/studentApplication";
-@import "./views/schoolSelector";
-@import "./views/structures";
-@import "views/costs";
-@import "views/optionsPaymentSelector";
+@import "./views/homeStudent";
 
 /*** components styles ***/
 @import "./components/asideFormLayoutComponent";

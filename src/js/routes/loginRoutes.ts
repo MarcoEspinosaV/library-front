@@ -19,6 +19,6 @@ export const LOGIN_ROUTES: any = {
     subTitle: false,
     theme: APP_THEMES.LOGIN.id,
     title: 'Ingresar'
-  },
+  }
   /* tslint:enable:object-literal-sort-keys */
 };

@@ -5,7 +5,9 @@ export const GLOBAL_IMAGES = {
   DRAG_AREA: require('../../images/drag-student.svg'),
   NO_IMAGE: require('../../images/no-image.png'),
   STUDENT_APPLICATION_SUCCESS: require('../../images/student-application-success.svg'),
-  LIBRARY: require('../../images/library.jpg')
+  LIBRARY: require('../../images/library.jpg'),
+  SLIDER: require('../../images/slider.png'),
+  HACKING: require('../../images/hacking.jpg')
 };
 
 export const ICONS = {
@@ -74,5 +76,6 @@ export const ICONS = {
   WARNING_CIRCLE_ICON: require('../../images/icons/warning-select-icon.svg'),
   YEARS: require('../../images/icons/icon-years-regular.svg'),
   YEARS_ICON: require('../../images/icons/years-icon.svg'),
-  LIBRARY: require('../../images/icons/library.svg')
+  LIBRARY: require('../../images/icons/library.svg'),
+  MENU: require('../../images/icons/menu.svg')
 };

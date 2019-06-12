@@ -1,0 +1,66 @@
+.home-student-view{
+  height: 100%;
+  .header-student{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .brand-header{
+      width: 135px;
+    }
+    .search-student-header{
+      width: 480px;
+    }
+    .notifications-account-content{
+      min-width: 148px;
+      .icon-notification{
+        height: 45px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        @media #{$medium-and-down} {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      .account-selector-student{
+        padding-left: 2rem;
+        @media #{$medium-and-down} {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+  .side-nav-component{
+    .header-side-nav{
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+    }
+  }
+  .slider-container{
+    height: 100%;
+    .slider-img{
+      width: 100%;
+      height: 550px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  .card{
+    .button-card{
+      display: none;
+    }
+    &:hover{
+      box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+      border-radius: .4rem;
+      .button-card{
+        display: flex;
+      }
+    }
+    .card-image{
+      width: 250px;
+      height: 350px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}

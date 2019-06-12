@@ -7,6 +7,7 @@ interface ISearchComponent {
   value: string;
   onChangeSearch: (value: string) => void;
   actionSearch: () => void;
+  big?: boolean;
 }
 
 export class SearchComponent extends React.Component<ISearchComponent, any> {
@@ -25,7 +26,7 @@ export class SearchComponent extends React.Component<ISearchComponent, any> {
     this.props.onChangeSearch(e.target.value);
   };
   render() {
-    const { placeholder, actionSearch } = this.props;
+    const { placeholder, actionSearch, big } = this.props;
 
     const searchClass = [
       'search-component',
@@ -37,7 +38,8 @@ export class SearchComponent extends React.Component<ISearchComponent, any> {
       'border',
       'radius',
       'bg-secondary',
-      'bg-lighten-5'
+      'bg-lighten-5',
+       big ? 'big-component' : ''
     ].join(' ');
     const searchInputClass = [
       'no-border',

@@ -9,6 +9,11 @@
       width: 40px
     }
   }
+  .main-label{
+    @media #{$medium-and-down} {
+      display: none;
+    }
+  }
   .options-selector-list{
     border-radius: 5px;
     background: $color-white;

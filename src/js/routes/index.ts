@@ -1,8 +1,6 @@
 import { ADMIN_ROUTES } from './adminRoutes';
 import { LOGIN_ROUTES } from './loginRoutes';
-import { PARENT_ROUTES } from './parentUserRoutes';
-import { STAFF_ROUTES } from './staffRoutes';
-import { SUPPORT_USER_ROUTES } from './supportUserRoutes';
+import { STUDENT_ROUTES } from './studentUserRoutes';
 
 type IRouteSection = 'A' | 'B' | 'C';
 
@@ -40,9 +38,7 @@ export interface IRouteItem {
 export const ROUTES: { [name: string]: any } = {
   ...ADMIN_ROUTES,
   ...LOGIN_ROUTES,
-  ...STAFF_ROUTES,
-  ...PARENT_ROUTES,
-  ...SUPPORT_USER_ROUTES
+  ...STUDENT_ROUTES
 };
 
 export const appConfigRoutes = () => {

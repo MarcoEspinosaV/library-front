@@ -11,6 +11,7 @@ import { ICreateParentUserPassword, ILogin, IRecoveryPassword } from '../../../r
 import { IApp } from '../../../reducers/rootReducer';
 import { LOGIN_ROUTES } from '../../../routes/loginRoutes';
 import { getQueryParams } from '../../../utils/UrlUtils';
+import {ROUTES} from "../../../routes";
 
 interface IMapStateToProps {
   labels: ILoginLanguage;
@@ -89,14 +90,7 @@ const mapDispatchToProps = (dispatch: (data: AnyAction) => void): IMapDispatchTo
       });
     },
     login: (value: any, urlSchoolName, token, createPasswordData, changedPassword) => {
-      dispatch({
-        payload: {
-          data: token && !changedPassword ? createPasswordData : value,
-          schoolName: urlSchoolName && urlSchoolName,
-          token: token ? `?token=${token}` : ''
-        },
-        type: token && !changedPassword ? LOGIN_ACTIONS.CREATE_PASSWORD_AND_LOGIN_WITH_SCHOOL : LOGIN_ACTIONS.LOGIN
-      });
+      dispatch(push('/home'));
     },
     onChangeCreatePasswordInput: (key, value) => {
       dispatch({

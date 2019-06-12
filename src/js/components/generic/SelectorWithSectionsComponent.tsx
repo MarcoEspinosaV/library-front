@@ -12,7 +12,7 @@ interface IOptions {
   id?: string;
   iconSmall?: boolean;
   section: string;
-  onClick: any;
+  onClick?: any;
 }
 
 interface IProps {
@@ -69,7 +69,6 @@ export default class SelectorWithSectionsComponent extends React.Component<IProp
         <div
           className="p-all p-t-s p-b-s flex-row flex-middle cursor-pointer"
           key={key}
-          onClick={() => this.onClickOption(item.onClick)}
         >
           {item.icon && (
             <div>
@@ -95,7 +94,7 @@ export default class SelectorWithSectionsComponent extends React.Component<IProp
       <div className="selector-with-sections relative" ref={this.optionContainer}>
         <div className="flex-row flex-middle cursor-pointer" onClick={this.toggleOption}>
           <div className="container-main-image">{mainIcon && <img src={mainIcon} className="main-image" />}</div>
-          {name && <div className="m-l">{name}</div>}
+          {name && <div className="m-l main-label">{name}</div>}
           <div>
             <img src={ICONS.ARROW_DOWN} className="icon-extra-small m-l p-t-s" />
           </div>

@@ -5,6 +5,8 @@ import { ILogin } from '../../../../reducers/loginReducer';
 import { validateCompleteData } from '../../../../utils/ValidationUtils';
 import ButtonComponent from '../../../generic/ButtonComponent';
 import InputComponent from '../../../generic/InputComponent';
+import {Link} from "react-router-dom";
+import {ROUTES} from "../../../../routes";
 
 interface ILoginFormProps {
   labels: ILoginLanguage;
@@ -16,7 +18,7 @@ interface ILoginFormProps {
 }
 
 export default (props: ILoginFormProps) => {
-  const { onChangeLoginInput, labels, setVisibleBackContent, loginData, login, loginErrors } = props;
+  const { onChangeLoginInput, labels, setVisibleBackContent, login, loginData, loginErrors } = props;
   const onSubmit = (e: any) => {
     e.preventDefault();
   };
@@ -54,14 +56,7 @@ export default (props: ILoginFormProps) => {
             {labels.FORGET_PASSWORD}
           </div>
           <div className="col-s12 col-m6 p-none">
-            <ButtonComponent
-              summitButton={true}
-              visualDisable={!validateCompleteData(loginData, ['email', 'password'])}
-              onClick={() => login()}
-              text={labels.LOGIN_BUTTON}
-              justifyBtn={true}
-              type="primary"
-            />
+            <a href={ROUTES.HOME.path} className="btn bg-primary text-white">{labels.LOGIN_BUTTON}</a>
           </div>
         </div>
       </form>
